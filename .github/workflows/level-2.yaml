@@ -12,4 +12,4 @@ jobs:
 
   level-2-external-call:
     needs: level-2
-    uses: eamonnmoloney/github-env-bug-repo-2/.github/workflows/level-1.yaml@main
+    uses: eamonnmoloney/github-env-bug-repo-1/.github/workflows/level-1.yaml@main
