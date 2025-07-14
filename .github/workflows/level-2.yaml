@@ -4,6 +4,7 @@ on:
       test:
         description: 'Test'
         required: true
+        type: string
 
 jobs:
   level-2:
