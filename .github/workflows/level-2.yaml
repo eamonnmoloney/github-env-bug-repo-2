@@ -1,5 +1,9 @@
 on:
   workflow_call:
+    inputs:
+      test:
+        description: 'Test'
+        required: true
 
 jobs:
   level-2:
@@ -8,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run Level 2
-        run: echo "Level 2"
+        run: echo "${{ inputs.test }}"
 
   level-2-external-call:
     needs: level-2

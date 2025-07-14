@@ -1,6 +1,18 @@
 on:
   workflow_dispatch:
+    inputs:
+      test:
+        description: 'Test'
+        required: false
+        default: 'test'
 
 jobs:
+  init:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run Level 1
+        run: echo "${{ inputs.test }}"
   level-1:
     uses: ./.github/workflows/level-2.yaml
