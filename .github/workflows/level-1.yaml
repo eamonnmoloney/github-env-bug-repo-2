@@ -1,4 +1,6 @@
 on:
+  schedule:
+    cron: '* * * * *'
   workflow_dispatch:
     inputs:
       test:
@@ -17,4 +19,4 @@ jobs:
   level-1:
     uses: ./.github/workflows/level-2.yaml
     with:
-      test: ${{ inputs.test }}
+      test: test me
